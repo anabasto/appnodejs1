@@ -1,0 +1,16 @@
+#!/bin/bash
+Now=$(date)
+SSMTP=$(which ssmtp)
+
+TEMPLATE="/tmp/template_email_relatorio.txt"
+
+echo > $TEMPLATE
+echo "To: anabasto@yahoo.com" >> $TEMPLATE
+echo "From: anabasto8@gmail.com" >> $TEMPLATE
+echo "Subject: Relatorio acessos HTTP" >> $TEMPLATE
+echo " " >> $TEMPLATE
+echo "Relatorio HTTP - $Now" >> $TEMPLATE
+echo "-----------------------------------------" >> $TEMPLATE
+
+halog -H -st -q < /var/log/haproxy.log >> $TEMPLATE
+

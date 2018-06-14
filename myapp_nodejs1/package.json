@@ -1,0 +1,14 @@
+{
+  "name": "myapp_nodejs1",
+  "version": "1.0.0",
+  "description": "App WEB nodejs",
+  "main": "app_js1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ana Basto",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
